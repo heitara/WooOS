@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.7.2)
+  - Alamofire (4.9.1)
   - Braintree/Card (4.15.1):
     - Braintree/Core
   - Braintree/Core (4.15.1)
@@ -19,29 +19,30 @@ PODS:
     - BraintreeDropIn/UIKit
   - BraintreeDropIn/UIKit (6.2.0)
   - Locksmith (4.0.0)
-  - ObjectMapper (3.2.0)
+  - ObjectMapper (4.2.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7)
+  - Alamofire (~> 4.8)
   - BraintreeDropIn
   - Locksmith
-  - ObjectMapper (~> 3.2)
+  - ObjectMapper (~> 4.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
+  https://github.com/CocoaPods/Specs.git:
     - Braintree
     - BraintreeDropIn
     - Locksmith
+  trunk:
+    - Alamofire
     - ObjectMapper
 
 SPEC CHECKSUMS:
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Braintree: acf4bd06f7f84ec69b33337c6b2265f112c53412
   BraintreeDropIn: 4e80bce4bc2b430f2fb1af0cd13ff3223d2758d3
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
-  ObjectMapper: 5cccd2de6f253eda859df8116a5a554d9769e859
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
 
-PODFILE CHECKSUM: 14abff3ee8893b4d1d02b622bafb6bb98ca65acf
+PODFILE CHECKSUM: 16e73ac903637fa1e7b8018f7c6782269cccdcb0
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

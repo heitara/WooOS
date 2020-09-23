@@ -395,7 +395,20 @@ public enum WooRequestConvertible: URLRequestConvertible {
     
     public func asURLRequest() throws -> URLRequest {
         let fullPath = WooAPI.version + path
-        var urlRequest = URLRequest(url: baseURL.appendingPathComponent(fullPath))
+        var url = baseURL.appendingPathComponent(fullPath)
+        
+        if WooOS.main.addKeyAndSecretAsQueryParameters {
+            var urlComponent = URLComponents(url: url, resolvingAgainstBaseURL: true)
+            urlComponent?.queryItems = [
+                URLQueryItem(name: "consumer_key", value: WooOS.main.api.consumerKey),
+                URLQueryItem(name: "consumer_secret", value: WooOS.main.api.consumerSecret)
+            ]
+            if let newUrl = try? urlComponent?.asURL() {
+                url = newUrl
+            }
+        }
+
+        var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         
         urlRequest = executeEncoding(for: urlRequest)

@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import Alamofire
+
+extension DataRequest {
+        public func logRequest() -> Self {
+        //Your logic for logging
+        return self
+    }
+}

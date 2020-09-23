@@ -340,6 +340,6 @@ open class WooProduct: Mappable {
     ///   - complete: Asynchronous completion containing a success flag, the list of products, and an optional error.
     public static func list<T: WooProduct>(with parameters: [WooProductRequestParameter]? = nil,
                                               then complete: WooCompletion.List<T>?) {
-        WooOS.main.api.getList(of: .publicProducts(parameters: parameters), then: complete)
+        WooOS.main.api.getList(of: .products(parameters: parameters), then: complete)
     }
 }

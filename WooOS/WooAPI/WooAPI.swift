@@ -3,6 +3,7 @@
 //  Eightfold
 //
 //  Created by brianna on 1/28/18.
+//  Updated by heitara on 9/19/20
 //  Copyright © 2018 Owly Design. All rights reserved.
 //
 
@@ -18,7 +19,7 @@ public class WooAPI {
     //  ------------------------
     
     /// Current version of the WooCommerce REST API. Used to concatenate the url path.
-    static let version = "wp-json/wc/v2"
+    static let version = "wp-json/wc/v3"
     
     /// The slug used to obtain the token with a valid username and password.
     static let tokenSlug = "jwt-auth/v1/token"

@@ -173,7 +173,9 @@ public extension WooAPI {
         // Make request
         alamofireManager.request(requestURL,
                                  method: .post,
-                                 parameters: tokenParameters)
+                                 parameters: tokenParameters,
+                                 encoding: URLEncoding.httpBody)
+        .logRequest()
             // Handle reponse
             .responseJSON { responseJSON in
                 

@@ -28,6 +28,8 @@ public class WooOS {
     /// The stored customer of the user that is currently signed in. If a user is not authenticated this value is nil.
     public var currentCustomer: WooCustomer?
     
+    public var addKeyAndSecretAsQueryParameters: Bool = false
+    
     //  ----------------------
     /// MARK: - Initialization
     //  ----------------------
@@ -38,9 +40,10 @@ public class WooOS {
     ///   - url: The base site URL of the WooCommerce store.
     ///   - key: The Consumer Key found in the WooCommerce API settings.
     ///   - secret: The Consumer Secret found in the WooCommerce API settings.
-    public init(baseURL: URL, key: String? = nil, secret: String? = nil) {
+    public init(baseURL: URL, key: String? = nil, secret: String? = nil, addKeyAndSecretAsQueryParameters: Bool = false) {
         api = WooAPI(url: baseURL, key: key, secret: secret)
         cart = WooCart()
+        self.addKeyAndSecretAsQueryParameters = addKeyAndSecretAsQueryParameters
         WooOS.main = self
     }
 }

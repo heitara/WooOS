@@ -326,7 +326,7 @@ open class WooProduct: Mappable {
     ///   - complete: WooCompletion Object completion
     public static func get<T: WooProduct>(product: Int,
                                    then complete: WooCompletion.Object<T>? = nil) {
-        WooOS.main.api.getObject(type: .publicProduct(id: product), then: complete)
+        WooOS.main.api.getObject(type: .product(id: product), then: complete)
     }
     
     public static func getComplete<T: WooProduct>(product: Int,

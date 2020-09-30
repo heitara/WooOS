@@ -173,7 +173,7 @@ public enum WooRequestConvertible: URLRequestConvertible {
         case .review(let product, let review):
             return "/products/\(product)/reviews/\(review)"
             
-        case .variations(let product):
+        case .variations(let product, let parameters):
             return "/products/\(product)/variations"
         case .variation(let product, let variation):
             return "/products/\(product)/variations/\(variation)"
